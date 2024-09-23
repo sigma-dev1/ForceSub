@@ -108,8 +108,8 @@ async def _(event):
                 count=count,
             )
             butt = [
-                Button.url("➡️ Gruppo", url=f"https://t.me/{channel}"),
-                Button.inline("✅ Verifica", data=f"unmute_{user.id}"),
+                Button.url("Gruppo", url=f"https://t.me/{channel}"),
+                Button.inline("Verifica", data=f"unmute_{user.id}"),
             ]
             await BotzHub.edit_permissions(
                 event.chat.id, user.id, until_date=None, send_messages=False
