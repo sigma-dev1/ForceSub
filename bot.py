@@ -172,7 +172,7 @@ async def _(event):
         nm = event.sender.first_name
         if x is False:
             await event.answer(
-                f"Sei entrato in @{channel}", cache_time=0, alert=True
+                f"Non sei entrato in @{channel}", cache_time=0, alert=True
             )
         elif x is True:
             try:
@@ -196,7 +196,7 @@ async def _(event):
 @BotzHub.on(events.NewMessage(pattern="^/start$"))
 async def strt(event):
     await event.reply(
-        f"**Questo bot è stato creato esclusivamente per SkyNetwork e non è clonabile né utilizzabile da nessuno, tranne che da @Contemplato, il creatore. Se desiderate un bot simile, contattate l’assistenza SkyNetwork**!\n @skynetworkufficiale",
+        f"**Questo bot è stato creato esclusivamente per SkyNetwork e non è clonabile né utilizzabile da nessuno, tranne che da @Contemplato, il creatore. Se desiderate un bot simile, contattate l’assistenza SkyNetwork!**\n ",
         buttons=[
             Button.url("Gruppo Log", url=f"https://t.me/{channel}"),
             Button.url("Network", url="t.me/skynetworkufficiale"),
