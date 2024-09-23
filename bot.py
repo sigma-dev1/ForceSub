@@ -196,7 +196,7 @@ async def _(event):
 @BotzHub.on(events.NewMessage(pattern="^/start$"))
 async def strt(event):
     await event.reply(
-        f"Questo bot è stato creato esclusivamente per SkyNetwork e non è clonabile né utilizzabile da nessuno, tranne che da @Contemplato, il creatore. Se desiderate un bot simile, contattate l’assistenza SkyNetwork.!\n\nCheckout @skynetworkufficiale :)",
+        f"**Questo bot è stato creato esclusivamente per SkyNetwork e non è clonabile né utilizzabile da nessuno, tranne che da @Contemplato, il creatore. Se desiderate un bot simile, contattate l’assistenza SkyNetwork**!\n\ @skynetworkufficiale",
         buttons=[
             Button.url("Gruppo Log", url=f"https://t.me/{channel}"),
             Button.url("Network", url="t.me/skynetworkufficiale"),
