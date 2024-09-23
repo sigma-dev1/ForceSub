@@ -95,7 +95,7 @@ async def _(event):
                 channel=f"@{channel}",
                 count=count,
             )
-            butt = [Button.url("Channel", url=f"https://t.me/{channel}")]
+            butt = [Button.url("Gruppo", url=f"https://t.me/{channel}")]
         else:
             msg = welcome_not_joined.format(
                 mention=mention,
@@ -108,8 +108,8 @@ async def _(event):
                 count=count,
             )
             butt = [
-                Button.url("Channel", url=f"https://t.me/{channel}"),
-                Button.inline("UnMute Me", data=f"unmute_{user.id}"),
+                Button.url("Gruppo", url=f"https://t.me/{channel}"),
+                Button.inline("✅ Verifica", data=f"unmute_{user.id}"),
             ]
             await BotzHub.edit_permissions(
                 event.chat.id, user.id, until_date=None, send_messages=False
@@ -158,8 +158,8 @@ async def mute_on_msg(event):
             count=count,
         )
         butt = [
-            Button.url("Channel", url=f"https://t.me/{channel}"),
-            Button.inline("UnMute Me", data=f"unmute_{event.sender_id}"),
+            Button.url("Gruppo", url=f"https://t.me/{channel}"),
+            Button.inline("✅ Verifica", data=f"unmute_{event.sender_id}"),
         ]
         await event.reply(reply_msg, buttons=butt)
 
@@ -196,10 +196,10 @@ async def _(event):
 @BotzHub.on(events.NewMessage(pattern="^/start$"))
 async def strt(event):
     await event.reply(
-        f"Hi. I'm a force subscribe bot made specially for @{channel}!\n\nCheckout @BotzHub :)",
+        f"Questo bot è stato creato esclusivamente per SkyNetwork e non è clonabile né utilizzabile da nessuno, tranne che da @Contemplato, il creatore. Se desiderate un bot simile, contattate l’assistenza SkyNetwork.!\n\nCheckout @skynetworkufficiale :)",
         buttons=[
-            Button.url("Channel", url=f"https://t.me/{channel}"),
-            Button.url("Repository", url="https://github.com/xditya/ForceSub"),
+            Button.url("Gruppo Log", url=f"https://t.me/{channel}"),
+            Button.url("Network", url="t.me/skynetworkufficiale"),
         ],
     )
 
