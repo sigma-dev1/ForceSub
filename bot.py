@@ -108,7 +108,7 @@ async def _(event):
                 count=count,
             )
             butt = [
-                Button.url("Gruppo", url=f"https://t.me/{channel}"),
+                Button.url("➡️ Gruppo", url=f"https://t.me/{channel}"),
                 Button.inline("✅ Verifica", data=f"unmute_{user.id}"),
             ]
             await BotzHub.edit_permissions(
@@ -158,7 +158,7 @@ async def mute_on_msg(event):
             count=count,
         )
         butt = [
-            Button.url("Gruppo", url=f"https://t.me/{channel}"),
+            Button.url("▶️ Gruppo", url=f"https://t.me/{channel}"),
             Button.inline("✅ Verifica", data=f"unmute_{event.sender_id}"),
         ]
         await event.reply(reply_msg, buttons=butt)
@@ -172,7 +172,7 @@ async def _(event):
         nm = event.sender.first_name
         if x is False:
             await event.answer(
-                f"Non sei entrato in @{channel}", cache_time=0, alert=True
+                f"❌Non sei entrato in @{channel}", cache_time=0, alert=True
             )
         elif x is True:
             try:
@@ -182,7 +182,7 @@ async def _(event):
             except Exception as e:
                 log.error(e)
                 return
-            msg = f"Grazie per essere entrato in {(await event.get_chat()).title}, {nm}!\nBuon Proseguimento!"
+            msg = f"✅ Grazie per essere entrato in {(await event.get_chat()).title}, {nm}!\nBuon Proseguimento!"
             butt = [Button.url("Gruppo", url=f"https://t.me/{channel}")]
             await event.edit(msg, buttons=butt)
     else:
@@ -198,8 +198,8 @@ async def strt(event):
     await event.reply(
         f"**Questo bot è stato creato esclusivamente per SkyNetwork e non è clonabile né utilizzabile da nessuno, tranne che da @Contemplato, il creatore. Se desiderate un bot simile, contattate l’assistenza SkyNetwork!**\n ",
         buttons=[
-            Button.url("Gruppo Log", url=f"https://t.me/{channel}"),
-            Button.url("Network", url="t.me/skynetworkufficiale"),
+            Button.url("🔰 Gruppo Autorizzato", url=f"https://t.me/{channel}"),
+            Button.url("🔗 Network", url="t.me/skynetworkufficiale"),
         ],
     )
 
