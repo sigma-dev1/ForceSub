@@ -182,7 +182,7 @@ async def _(event):
             except Exception as e:
                 log.error(e)
                 return
-            msg = f"✅ Grazie per essere entrato in {(await event.get_chat()).title}, {nm}!\nBuon Proseguimento!"
+            msg = f"✅Grazie per essere entrato nel gruppo ti ringrazia tutto lo staff di{(await event.get_chat()).title}, ,\nBuon Proseguimento!"
             butt = [Button.url("Gruppo", url=f"https://t.me/{channel}")]
             await event.edit(msg, buttons=butt)
     else:
@@ -198,7 +198,7 @@ async def strt(event):
     await event.reply(
         f"**Questo bot è stato creato esclusivamente per SkyNetwork e non è clonabile né utilizzabile da nessuno, tranne che da @Contemplato, il creatore. Se desiderate un bot simile, contattate l’assistenza SkyNetwork!**\n ",
         buttons=[
-            Button.url("🔰 Gruppo Autorizzato", url=f"https://t.me/{channel}"),
+            Button.url("🔰 Gruppo", url=f"https://t.me/{channel}"),
             Button.url("🔗 Network", url="t.me/skynetworkufficiale"),
         ],
     )
