@@ -172,7 +172,7 @@ async def _(event):
         nm = event.sender.first_name
         if x is False:
             await event.answer(
-                f"You haven't joined @{channel} yet!", cache_time=0, alert=True
+                f"Sei entrato in @{channel}", cache_time=0, alert=True
             )
         elif x is True:
             try:
@@ -182,8 +182,8 @@ async def _(event):
             except Exception as e:
                 log.error(e)
                 return
-            msg = f"Welcome to {(await event.get_chat()).title}, {nm}!\nGood to see you here!"
-            butt = [Button.url("Channel", url=f"https://t.me/{channel}")]
+            msg = f"Grazie per essere entrato in {(await event.get_chat()).title}, {nm}!\nBuon Proseguimento!"
+            butt = [Button.url("Gruppo", url=f"https://t.me/{channel}")]
             await event.edit(msg, buttons=butt)
     else:
         await event.answer(
