@@ -196,10 +196,9 @@ async def _(event):
 @BotzHub.on(events.NewMessage(pattern="^/start$"))
 async def strt(event):
     await event.reply(
-        f"**Questo bot è stato creato esclusivamente per SkyNetwork e non è clonabile né utilizzabile da nessuno, tranne che da @Contemplato, il creatore. Se desiderate un bot simile, contattate l’assistenza SkyNetwork!**\n ",
+        f"**Questo bot è stato creato esclusivamente per @NightmaresCommunity e non è clonabile né utilizzabile da nessuno, tranne che dallo staff.**\n ",
         buttons=[
-            Button.url("🔰 Gruppo", url=f"https://t.me/{channel}"),
-            Button.url("🔗 Network", url="t.me/skynetworkufficiale"),
+            Button.url("🔗 Network", url="https://t.me/NightmaresCommunity"),
         ],
     )
 
