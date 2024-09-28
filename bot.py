@@ -182,7 +182,7 @@ async def _(event):
             except Exception as e:
                 log.error(e)
                 return
-            msg = f"✅ Grazie per essere entrato nel gruppo ti ringrazia tutto lo staff di {(await event.get_chat()).title}, ,\nBuon Proseguimento!"
+            msg = f"✅ Grazie per essere entrato nel gruppo ti ringrazia tutto lo staff di {(await event.get_chat()).title}, \nBuon Proseguimento!"
             butt = [Button.url("Gruppo", url=f"https://t.me/{channel}")]
             await event.edit(msg, buttons=butt)
     else:
